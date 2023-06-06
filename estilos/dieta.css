@@ -1,0 +1,127 @@
+main{
+    padding-top: 50px;
+    height: calc(100vh - 50px);
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.img-dieta, .info-container{
+    width: 50%;
+    height: 100%;
+}
+.info-container{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    padding: 0 20px;
+    justify-content: center;
+}
+.titulo-dieta{
+    font-size: 5.5rem;
+    margin-bottom: 0;
+}
+.descripcion-dieta{
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+.botones-dieta-container{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.boton-beneficios{
+    cursor: pointer;
+}
+.boton-dieta{
+    position: relative;
+}
+.bottom-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 50px;
+}
+.popup-beneficios-container{
+    width: 100%;
+    height: 100%;
+}
+.popup-beneficios{
+    display: none;
+    position: relative;
+    text-align: start;
+    opacity: 0;
+    pointer-events: none;
+    background-color: var(--verde);
+    border: 3px solid black;
+    padding: 10px;
+}
+.popup-beneficios::after{
+    content: '';
+    display:flex;
+    height: 50px;
+    width: 20px;
+    position: absolute;
+    background-color: var(--verde);
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    transform: rotate(270deg);
+    z-index: 0;
+    bottom: 70%;
+    left: -7%;
+}
+.popup-lista{
+    position: relative;
+    color: black;
+    z-index: 2;
+    font-size: 1.8rem;
+}
+@media(max-width: 650px){
+    .boton{
+        font-size: 1rem;
+    }
+    .titulo-dieta{
+        font-size: 5rem;
+    }
+}
+@media(max-width: 810px){
+    main{
+        height: auto;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .img-dieta, .info-container{
+        width: 90%;
+    }
+    .info-container{
+        padding-bottom: 20px;
+    }
+    .titulo-dieta{
+        width: 100%;
+    }
+    .bottom-container{
+        flex-direction: column;
+        width: 100%;
+    }
+    .botones-dieta-container{
+        flex-direction: row;
+        gap: 10px;
+    }
+    .boton{
+        width:25%;
+        height: auto;
+    }
+    .popup-beneficios::after{
+        transform: rotate(0deg);
+        bottom: 95%;
+        left: 10%;
+    }
+    .img-dieta{
+        width: 0 auto;
+    }
+
+}

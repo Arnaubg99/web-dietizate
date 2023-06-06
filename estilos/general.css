@@ -1,0 +1,158 @@
+:root{
+    --verde: #90ac64;
+}
+html{
+    font-family: sans-serif;
+    font-size: 10px;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+nav{
+    background-color: var(--verde);
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+main{
+    width: 100%;
+    height: 100vh;
+}
+.max-width{
+    max-width: 1440px;
+    width: 100%;
+}
+.flex-center{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+.barra-navegacion{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.enlace-barra-navegacion{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+}
+.enlace-barra-navegacion:hover{
+    text-decoration: underline;
+}
+.titulo{
+    font-size: 7rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    margin-bottom: 0px;
+}
+.selected{
+    color: black;
+}
+.texto{
+    font-size: 1.8rem;
+}
+.boton{
+    width: 150px;
+    padding: 14px;
+    display: block;
+    margin: 0 auto;
+    background-color: var(--verde);
+    border-radius: 15px;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+.card{
+    min-width: 280px;
+    text-decoration: none;
+}
+.card-img{
+    width: 100%;
+    height: 186px;
+    position: relative;
+}
+.card:hover .card-img{
+    filter: sepia(100%);
+}
+.card-texto{
+    font-size: 1.6rem;
+    color: black;
+}
+footer{
+    background-color: white;
+    color: black;
+    padding: 20px;
+    font-size: 1.4rem;
+}
+.info-logo-footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.info-footer-container{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.politica-privacidad-footer-container, .contacto-footer-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.titulo-footer{
+    font-weight: bold;
+}
+.link-footer{
+    text-decoration: none;
+    color: black;
+}
+.link-footer:hover{
+    text-decoration: underline;
+}
+hr{
+    margin: 20px 0;
+}
+.logo-footer{
+    width: 100px;
+    height: min-content;
+    max-width: 100px;
+}
+.logo-footer:hover{
+    animation: spin 0.4s linear;
+}
+
+@media (max-width:500px) {
+    .enlace-barra-navegacion{
+        font-size: 1.2rem;
+    }
+    .titulo{
+        font-size: 5.5rem;
+    }
+    .texto{
+        font-size: 1.6rem;
+    }
+    footer{
+        font-size: 1.2rem;
+    }
+    .logo-footer{
+        width: 18%;
+        max-width: 100px;
+    }
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,24 @@
+.container{
+    text-align: center;
+    width: 80%;
+}
+.lista-restaurantes{
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    column-gap: 30px;
+}
+.lista-restaurantes::-webkit-scrollbar{
+    height: 10px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+.lista-restaurantes::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 10px;
+}

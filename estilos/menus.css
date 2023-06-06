@@ -1,0 +1,31 @@
+.container{
+    text-align: center;
+    width: 80%;
+}
+.titulo-container{
+    font-size: 8rem;
+}
+.texto-container{
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+.lista-menus{
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: start;
+    column-gap: 30px;
+}
+.lista-menus::-webkit-scrollbar{
+    height: 10px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+.lista-menus::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 10px;
+}

@@ -1,0 +1,68 @@
+main{
+    padding-top: 50px;
+    height: calc(100vh - 50px);
+}
+p{
+    margin: 10px 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 100%;
+}
+.titulo-container{
+    padding-left: 20px;
+}
+.texto{
+    font-size: 2.6rem;
+    margin-top: 0;
+}
+.info-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+.texto-info-container{
+    width: 40%;
+    height: 100%;
+    padding: 0 20px;   
+}
+.titulo-restaurante{
+    font-size: 2rem;
+}
+.direccion-restaurante{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.descripcion-restaurante{
+    font-size: 1.6rem;
+}
+.imagen-restaurante{
+    width: 60%;
+    height: 400px;
+    object-fit: fill;
+}
+
+@media(max-width: 810px){
+    main{
+        height: auto;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .info-container{
+        width: 90%;
+        flex-direction: column;
+    }
+    .texto-info-container{
+        width: 100%;
+    }
+    .imagen-restaurante{
+        width: 100%;
+        height: unset;
+    }
+}

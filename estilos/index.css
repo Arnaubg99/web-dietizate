@@ -1,0 +1,90 @@
+body{
+    color: white;
+    background-image: url("../assets/portada.png");
+    background-size: cover;
+}
+.container{
+    height: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.boton{
+    width: 150px;
+    padding: 14px;
+    display: block;
+    margin: 0 auto;
+    background-color: var(--verde);
+    border-radius: 15px;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+.rating > span:hover:before {
+    content: "\2605";
+    position: absolute;
+}
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+    content: "\2605";
+    position: absolute;
+}
+@media (max-width: 500px) {
+    .container{
+        height: 50%;
+    }
+}
+
+.popup-star-rating{
+    display: flex;
+    position: fixed;
+    top: 80%;
+    right: 0;
+    width: 20%;
+    height: 70px;
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+.pregunta-star-rating-container{
+    padding: 10px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.pregunta-star-rating-container p{
+    margin: 0;
+}
+.star-rating { 
+    font-size: 0;
+    width: 100%;
+    white-space: nowrap; 
+    display: inline-block; 
+    vertical-align: middle; 
+} 
+.star-rating .star { 
+    display: inline-block; 
+    font-size: 30px; 
+    color: #ccc; 
+    margin-right: 5px; 
+    cursor: pointer; 
+} 
+.star-rating .star.active { 
+    color: #f6b93b; 
+}
+
+@media (max-width:900px) {
+    .popup-star-rating{
+        width: 100% !important;
+    } 
+}
+@media (max-width:1100px) {
+    .popup-star-rating{
+        width: 45%;
+    } 
+}
